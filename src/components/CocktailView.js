@@ -11,7 +11,7 @@ const CocktailView = () => {
   useEffect(() => {
     const fetchCocktail = async () => {
       try {
-        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=15300`);
+        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
         if (response.data.drinks && response.data.drinks.length > 0) {
           setCocktail(response.data.drinks[0]);
         } else {
@@ -67,7 +67,7 @@ const CocktailView = () => {
             const ingredient = cocktail[key];
             const measure = cocktail[`strMeasure${index + 1}`];
             return (
-              <li key={`${key}-${ingredient}`} style={{ color: "#fff", fontStyle: "italic" }}>
+              <li key={`${ingredient}-${index}`} style={{ color: "#fff", fontStyle: "italic" }}>
                 {measure ? `${measure} ` : ""}{ingredient}
               </li>
             );
@@ -81,4 +81,5 @@ const CocktailView = () => {
 };
 
 export default CocktailView;
+
 
