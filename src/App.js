@@ -7,13 +7,11 @@ import CocktailDetail from "./components/CocktailView";
 
 function App() {
   const [cocktails, setCocktails] = useState([]);
-  const [info, setInfo] = useState({});
 
   const fetchCocktails = async () => {
     try {
       const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary Drink");
       setCocktails(response.data.drinks);
-      setInfo({}); // Reset pagination info if necessary
     } catch (error) {
       console.error(error);
     }
