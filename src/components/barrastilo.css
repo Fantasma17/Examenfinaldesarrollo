@@ -1,0 +1,30 @@
+
+.barra {
+  background: #141E30; /* fallback para navegadores antiguos */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elevado */
+  display: flex; /* Usar flexbox para alinear elementos */
+  justify-content: space-between; /* Espaciado entre los elementos */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.barra-left,
+.barra-right {
+  display: flex; /* Flexbox para alinear títulos */
+  align-items: center; /* Alinear verticalmente */
+}
+
+.barra-title {
+  font-size: 26px;
+  font-family: 'Pacifico', cursive; /* Fuente cursiva para simular una firma */
+  color: #e8e7e7; /* Color dorado */
+  letter-spacing: 1px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3); /* Sombra para destacar el título */
+  margin: 0; /* Eliminar márgenes predeterminados */
+}
+
+.barra-right {
+  margin-left: auto; /* Empujar este div a la derecha */
+}

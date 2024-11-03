@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/barrra";
-import Characters from "./components/Characters";
-import CocktailDetail from "./components/CocktailDetail";
+import Navbar from "./components/barra";
+import Characters from "./components/CocktailGallery";
+import CocktailDetail from "./components/CocktailView";
 
 function App() {
   const [cocktails, setCocktails] = useState([]);

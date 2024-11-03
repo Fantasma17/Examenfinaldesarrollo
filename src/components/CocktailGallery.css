@@ -1,0 +1,70 @@
+.portfolio-button {
+    color: white; /* Cambia el color del texto a blanco */
+    padding: 0.5em 1em; /* Reduce el espaciado interno para hacerlo más pequeño */
+    display: inline-block;
+    border: 3px solid transparent;
+    position: relative; 
+    font-size: 1.2em; /* Reduce el tamaño de la fuente */
+    font-style: italic; /* Aplica estilo cursivo al texto */
+    cursor: pointer;
+    letter-spacing: 0.07em;
+    /* Cambia el color de fondo a un degradado */
+    background: #1e3c72;  /* fallback para navegadores antiguos */
+    background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-decoration: none; /* Evita el subrayado del enlace */
+    transition: color 0.4s, background 0.4s; /* Agrega transición para el fondo */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    text-align: center; /* Asegura que el texto del botón esté centrado */
+    border-radius: 5px; /* Esquinas redondeadas del botón */
+}
+
+.portfolio-button::after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: calc(0.7em * 1.2);
+    right: calc(0.7em * 1.2);
+    height: 3px;
+    background: gray; /* Cambia el color de la línea inferior a gris */
+    transition: 
+      transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s;
+    transform-origin: left;
+}
+
+.portfolio-button:hover {
+    color: #19d6cd; /* Cambia el color del texto al pasar el ratón */
+    background-color: #d9534f; /* Color más oscuro al pasar el mouse */
+}
+
+.portfolio-button:hover::after {
+    transform: scale3d(0, 1, 1);
+}
+
+/* Estilo para centrar el contenido dentro de la tarjeta */
+.card {
+    border-radius: 10px; /* Esquinas redondeadas */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    transition: transform 0.3s; /* Animación al pasar el mouse */
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+  
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+  
+.card-img-top {
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover; /* Recorta la imagen para que se ajuste */
+}
+  
+.card-title {
+    font-size: 1.2rem; /* Tamaño de fuente más grande para el título */
+    font-weight: bold; /* Negrita */
+}
+.card-text {
+    font-style: italic; /* Aplica estilo cursivo al texto */
+}
