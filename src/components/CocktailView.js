@@ -33,10 +33,10 @@ const CocktailView = () => {
     <div 
       className="container" 
       style={{ 
-        background: "#0f0c29",  /* fallback for old browsers */
-        background: "-webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29)",  /* Chrome 10-25, Safari 5.1-6 */
-        background: "linear-gradient(to right, #24243e, #302b63, #0f0c29)", /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        color: "#fff", // Color de texto en blanco
+        background: "#0f0c29", 
+        background: "-webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29)", 
+        background: "linear-gradient(to right, #24243e, #302b63, #0f0c29)", 
+        color: "#fff", 
         padding: "20px",
         borderRadius: "8px" 
       }}
@@ -50,7 +50,7 @@ const CocktailView = () => {
           backgroundColor: "#FF6347", 
           color: "#fff", 
           border: "none", 
-          fontStyle: "italic" // Aquí se añade el estilo en cursiva
+          fontStyle: "italic" 
         }}
       >
         Menú Inicial
@@ -67,7 +67,7 @@ const CocktailView = () => {
             const ingredient = cocktail[key];
             const measure = cocktail[`strMeasure${index + 1}`];
             return (
-              <li key={key} style={{ color: "#fff", fontStyle: "italic" }}>
+              <li key={`${key}-${ingredient}`} style={{ color: "#fff", fontStyle: "italic" }}>
                 {measure ? `${measure} ` : ""}{ingredient}
               </li>
             );
@@ -81,3 +81,4 @@ const CocktailView = () => {
 };
 
 export default CocktailView;
+
