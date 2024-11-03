@@ -11,7 +11,7 @@ const CocktailView = () => {
   useEffect(() => {
     const fetchCocktail = async () => {
       try {
-        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
+        const response = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=15300`);
         if (response.data.drinks && response.data.drinks.length > 0) {
           setCocktail(response.data.drinks[0]);
         } else {
